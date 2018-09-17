@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+
+        setInterval(function timer() {
+            var currentDate = new Date();
+            document.getElementById("quiz").innerHTML = currentDate.toLocaleTimeString();
+        }, 1000);
+
+        var timeleft = 10;
+        var downloadTimer = setInterval(function () {
+            timeleft = timeleft - 1;
+            document.getElementById("countdowntimer").textContent = timeleft;
+            if (timeleft <= 3) {
+                document.getElementById("countdowntimer").style.color = 'RED';
+                document.getElementById("countdowntimer").style.fontSize = "500%";
+            }
+            if (timeleft <= 0) {
+                clearInterval(downloadTimer);
+                document.getElementById("btn-submit").style.display = 'none';
+            }
+        }, 1000);
+
+    </script>
+</head>
+
+<body>
+
+    <p id="quiz"></p>
+    <p> Your time ends in: <span id="countdowntimer">10 </span> seconds</p>
+    <div style="margin-top:25px;">
+        <p id="qt-quiz">Kathmandu is the capital of:</p>
+        <label>A:</label>
+        <input type='text' id='ans' name="answer">
+        <button id="btn-submit" type="submit" value="Submit">Submit</button>
+    </div>
+</body>
+<script>
+    var currentDate = new Date();
+    document.getElementById("quiz").innerHTML = currentDate.toLocaleTimeString();</script>
+
+</html>
