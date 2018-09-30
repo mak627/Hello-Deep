@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Ramt 1.1.1 Shyan 1-1-1 Hari 1.1.1 @ina 1.1.1 #ima 1-1-1 @ris 1.1.1.1</h1>
+    <div>
+        <button id="btn-ysubmit" type="submit" value="Submit">Yes</button>
+        <button id="btn-nsubmit" type="submit" value="Submit">No</button>
+    </div>
+    <p id="demo">Changes Here</p>
+
+    <script>
+        var personList1 = 'Ramt 1.1.1 Shyan 1-1-1 Hari 1.1.1 @ina 1.1.1 #ima 1-1-1 @ris 1.1.1.1';
+        var reg = /\W\w{3}\b\s\d\.\d.\d/g;
+        let myAns = personList1.match(reg);
+        console.log(myAns);
+        var ykey = document.getElementById("btn-ysubmit");
+        // var nkey = document.getElementById("btn-nsubmit");
+        ykey.onclick = function () {
+            if (myAns === undefined || myAns.length == 0) {
+                document.getElementById("demo").style.color = "Red"
+            }
+            else {
+                document.getElementById("demo").style.color = "Green"
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <script src="js/script..js"></script>
-  </head>
+<head>
+  <script src="../js/script.js"></script>
+  <style>
+    .default_hw {
+      width: 400px;
+      height: 700px;
+      margin: auto;
+      background-color:turquoise;
+    }
+            .main_div {
+          position:absolute;
+          top: 50%;
+          left: 48%;
+        }
+    
+  </style>
+</head>
 
-  <body>
-    <h1>Javascript Rocks!!!</h1>
-  </body>
+<body>
+  <div id="gamediv" class="default_hw">
+    <div class="main_div">
+      <button type="button" id="btn-begin" onclick="startGame()">Click</button>
+      <p id="gameTimer"></p>
+    </div>
+  </div>
+</body>
 
 </html>

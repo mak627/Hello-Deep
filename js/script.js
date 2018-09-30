@@ -1,9 +1,13 @@
-console.log(getAreaOfCircle(5));
+function startGame() {
+  var timeleft = 4;
+  var startcntdwn = setInterval(function () {
+    timeleft = timeleft - 1;
+    document.getElementById("gameTimer").textContent = "Game starts in: " + timeleft;
+    document.getElementById("gameTimer").style.fontSize = "x-large";
+    if (timeleft <= 0) {
+      document.getElementById("gamediv").style.backgroundColor = "Black"
+      clearInterval(startcntdwn);
+    }
+  }, 1000);
+}
 
-function getAreaOfCircle(radius) {
-    const PI = 3.14;
-    var area = PI * radius * radius;
-    
-    return area;
-  }
-  
